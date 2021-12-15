@@ -1,9 +1,20 @@
 package com.level1;
 
 public class item01 {
-    String name;
+    String studentId;
+    String grade;
+    String studentName;
+    String age;
+
+    private item01(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public static item01 autoCreateId(String studentId){
+        return new item01(studentId);
+    }
 
     public static void main(String[] args) {
-        // 생성자 대신 정적 팩터리 메서드를 사용할 수 없는지 생각..
+        item01 item01 = autoCreateId("1");
     }
 }
